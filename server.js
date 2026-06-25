@@ -33,6 +33,7 @@ const auditSystem = require('./audit_system');
 dotenv.config();
 
 const app = express();
+app.set('trust proxy', 1);
 
 // Database Connection (MySQL/XAMPP)
 const db = mysql.createPool({
